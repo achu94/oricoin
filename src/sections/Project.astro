@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import prjectImg from "../assets/img-project.png";
+---
+
+<section
+  id="prject"
+  class="container h-full mx-auto flex flex-col justify-center align-middle items-center p-10"
+>
+  <Image
+    class="animate-bounce-slow"
+    src={prjectImg}
+    alt="bori prject image"
+    width={150}
+  />
+  <div>
+    <h1
+      class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal"
+    >
+      Project Bori
+    </h1>
+    <p
+      class="text-1xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal"
+    >
+      Woof! As an intergalactic space adventurer, I am always ready to explore
+      the cosmos with my trusty canine companion by my side. Together, we'll
+      conquer galaxies and make new friends among the stars! With our incredible
+      stretchy powers, we can overcome any obstacle that comes our way
+    </p>
+  </div>
+</section>
