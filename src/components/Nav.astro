@@ -1,5 +1,4 @@
 ---
-
 import Logo from "./Logo.astro";
 
 const navItems = [
@@ -12,16 +11,12 @@ const navItems = [
     path: "#project",
   },
   {
-    name: "Tokenomics",
-    path: "#tokenomics",
-  },
-  {
     name: "Roadmap",
     path: "#roadmap",
   },
   {
-    name: "Join our adventure",
-    path: "#join2",
+    name: "How to Buy",
+    path: "#howToBuy",
   },
 ];
 ---
@@ -97,32 +92,31 @@ const navItems = [
               stroke-linejoin="round"
               d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
             ></path> -->
-            $BUY ORI
-          </svg>
+          $BUY BORI
         </button>
       </div>
     </div>
   </div>
-
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="hidden sm:hidden" id="mobile-menu">
-    <div class="space-y-1 px-2 pb-3 pt-2">
-      {
-        navItems.map((item) => (
-          <>
-            <a
-              href={"#" + item.path}
-              class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-              aria-current="page"
-            >
-              {item.name}
-            </a>
-          </>
-        ))
-      }
-    </div>
-  </div>
 </nav>
+
+<!-- Mobile menu, show/hide based on menu state. -->
+<div class="hidden sm:hidden" id="mobile-menu">
+  <div class="space-y-1 px-2 pb-3 pt-2">
+    {
+      navItems.map((item) => (
+        <>
+          <a
+            href={item.path}
+            class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page"
+          >
+            {item.name}
+          </a>
+        </>
+      ))
+    }
+  </div>
+</div>
 
 <script>
   const mobileMenuButton = document.querySelector("button[aria-expanded]");

@@ -4,7 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import Stars from "../components/Stars.astro";
+import Footer from "./Footer.astro";
 ---
 
 <!doctype html>
@@ -20,6 +20,7 @@ import Stars from "../components/Stars.astro";
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -42,6 +43,7 @@ import Stars from "../components/Stars.astro";
     font-family: system-ui, sans-serif;
     background: #13151a;
     background-size: 224px;
+    scroll-behavior: smooth;
   }
   code {
     font-family:
