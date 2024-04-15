@@ -1,0 +1,53 @@
+---
+type Phase = {
+  [key: number]: string[];
+};
+
+const phases: Phase = {
+  1: [
+    "Strapping on the spacesuit for Bori's cosmic journey",
+    "Polishing the helmet and adjusting the oxygen tank",
+    "Recruiting the bravest astronauts for the Bori mission",
+    "Counting down to the launch of Bori's rocketship",
+    "Navigating through the stars with Bori's cosmic roadmap",
+    "Fueling up the rocket with moon cheese for extra propulsion",
+  ],
+  2: [
+    "Bori's cosmic token now orbiting on the Solana blockchain",
+    "Bori listed on the intergalactic stock exchanges: CoinMarketMoon and CoinGeckoNebula",
+    "Interstellar chatter filled with Bori memes and cosmic wisdom",
+    "Joining the crew of Bori holders as the community expands to 5000 astronauts",
+  ],
+  3: [
+    "Bori's rocket touches down on centralized galaxies for trading",
+    "Bori's presence eclipsing across the cosmic social media platforms",
+    "Bori gains endorsements from alien celebrities and crypto cosmonauts",
+    "Reaches a cosmic market cap of 1 billion before the Intergalactic Council notices",
+    "Bori's universe-faring community expanding to 100,000 fellow explorers",
+  ],
+};
+
+import Stars from "../components/Stars.astro";
+---
+
+<section class="h-auto">
+  <div class="flex flex-col justify-center items-start p-10 gap-10">
+    {
+      Object.keys(phases).map((phase: string) => (
+        <div class="w-full border p-5">
+          <Stars />
+          <h1 class="m-2 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+            Phase: {phase}
+          </h1>
+          <ul>
+            {phases[parseInt(phase)].map((item: string) => (
+              <li class="font-bold list-disc text-1xl leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
