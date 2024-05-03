@@ -33,11 +33,7 @@ import Stars from "../components/Stars.astro";
 
 <section class="h-auto" id="roadmap">
   <div class="flex flex-col justify-center items-start p-10 gap-10">
-    <p
-      class="text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal"
-    >
-      Roadmap
-    </p>
+    <h1>Roadmap</h1>
     {
       Object.keys(phases).map((phase: string) => (
         <div class="w-full border p-5">
@@ -47,8 +43,8 @@ import Stars from "../components/Stars.astro";
           </h1>
           <ul>
             {phases[parseInt(phase)].map((item: string) => (
-              <li class="font-bold list-disc text-1xl leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
-                {item}
+              <li>
+                <p>{item}</p>
               </li>
             ))}
           </ul>

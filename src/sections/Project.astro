@@ -15,32 +15,28 @@ import lockIcon from "../assets/lock.svg";
   />
   <div class="flex flex-col gap-5">
     <div>
-      <h1
-        class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal"
-      >
-        Project Bori
-      </h1>
-      <p
-        class="text-1xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal"
-      >
+      <h1>Project Bori</h1>
+      <p>
         Hi, I'm BORI from Andromeda and I'm here to smash all the Mеme-Coins on
         the planet. Together with you, we will conquer the world and take over
         all markets. I will become the greatest Meme-Coin on the planet.
       </p>
     </div>
-    <ul class="dark:text-gray-100 border p-2 bg-gray-500">
-      <li class="text-3xl flex justify-center">100.000.000.000</li>
-      <li class="text-1xl flex justify-center">Total supply</li>
-    </ul>
-    <ul class="dark:text-gray-100 border p-2 bg-gray-500">
-      <li class="text-3xl flex justify-center">0 %</li>
-      <li class="text-1xl flex justify-center">Tax</li>
-    </ul>
-    <ul class="dark:text-gray-100 border p-2 bg-gray-500">
-      <li class="text-3xl flex justify-center">
-        <Image class="" src={lockIcon} alt="liquidity icon" width={50} />
-      </li>
-      <li class="text-1xl flex justify-center">Liquidity</li>
-    </ul>
+    <div class="flex flex-col gap-5 md:flex-row justify-center">
+      <ul class="dark:text-gray-100 border p-2 bg-gray-500 md:flex-1">
+        <li class="text-3xl flex justify-center">100.000.000.000</li>
+        <li class="text-1xl flex justify-center">Total supply</li>
+      </ul>
+      <ul class="dark:text-gray-100 border p-2 bg-gray-500 md:flex-1">
+        <li class="text-3xl flex justify-center">0 %</li>
+        <li class="text-1xl flex justify-center">Tax</li>
+      </ul>
+      <ul class="dark:text-gray-100 border p-2 bg-gray-500 md:flex-1">
+        <li class="text-3xl flex justify-center">
+          <Image class="" src={lockIcon} alt="liquidity icon" width={50} />
+        </li>
+        <li class="text-1xl flex justify-center">Liquidity</li>
+      </ul>
+    </div>
   </div>
 </section>

@@ -13,7 +13,7 @@ import Footer from "./Footer.astro";
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <link rel="stylesheet" href="global.css" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -27,6 +27,16 @@ import Footer from "./Footer.astro";
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  @layer base {
+    p {
+      @apply text-base font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-2xl md:leading-normal lg:text-base lg:leading-normal;
+    }
+
+    h1 {
+      @apply text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal lg:text-3xl;
+    }
+  }
 
   :root {
     --accent: 136, 58, 234;
@@ -42,7 +52,6 @@ import Footer from "./Footer.astro";
   html {
     font-family: system-ui, sans-serif;
     background: #13151a;
-    background-size: 224px;
     scroll-behavior: smooth;
   }
   code {
@@ -76,13 +85,21 @@ import Footer from "./Footer.astro";
     );
   }
 
+  main {
+    max-width: 1366px;
+    min-width: 320px;
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: 768px) {
     section {
       flex-direction: column;
     }
   }
 
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) {
     section {
       max-width: 640px;
     }
@@ -91,5 +108,5 @@ import Footer from "./Footer.astro";
     section {
       max-width: 768px;
     }
-  }
+  } */
 </style>
